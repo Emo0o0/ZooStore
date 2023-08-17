@@ -5,9 +5,9 @@ import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.entities.Multimedia;
 import com.example.zoostore.persistence.repository.ItemRepository;
 import com.example.zoostore.persistence.repository.MultimediaRepository;
-import com.example.zoostore.api.operations.inputOutput.multimedia.addMultimedia.AddMultimediaInput;
-import com.example.zoostore.api.operations.inputOutput.multimedia.addMultimedia.AddMultimediaOutput;
-import com.example.zoostore.api.operations.inputOutput.multimedia.addMultimedia.MultimediaAddOperation;
+import com.example.zoostore.api.operations.inputoutput.multimedia.add.AddMultimediaInput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.add.AddMultimediaOutput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.add.MultimediaAddOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

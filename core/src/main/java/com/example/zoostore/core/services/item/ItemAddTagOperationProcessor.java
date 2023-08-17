@@ -1,8 +1,8 @@
 package com.example.zoostore.core.services.item;
 
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.AddTagToItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.AddTagToItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.ItemAddTagOperation;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.AddTagToItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.AddTagToItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.ItemAddTagOperation;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.core.exceptions.tag.TagNotFoundException;
 import com.example.zoostore.persistence.entities.Item;

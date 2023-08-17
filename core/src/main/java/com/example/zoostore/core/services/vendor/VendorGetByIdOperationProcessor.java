@@ -3,10 +3,10 @@ package com.example.zoostore.core.services.vendor;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.persistence.entities.Vendor;
 import com.example.zoostore.persistence.repository.VendorRepository;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.GetVendorByIdInput;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.ItemsToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.GetVendorByIdOutput;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.VendorGetByIdOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.GetVendorByIdInput;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.ItemsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.GetVendorByIdOutput;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.VendorGetByIdOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

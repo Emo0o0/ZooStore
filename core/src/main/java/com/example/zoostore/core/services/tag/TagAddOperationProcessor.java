@@ -2,9 +2,9 @@ package com.example.zoostore.core.services.tag;
 
 import com.example.zoostore.persistence.entities.Tag;
 import com.example.zoostore.persistence.repository.TagRepository;
-import com.example.zoostore.api.operations.inputOutput.tag.addTag.AddTagInput;
-import com.example.zoostore.api.operations.inputOutput.tag.addTag.AddTagOutput;
-import com.example.zoostore.api.operations.inputOutput.tag.addTag.TagAddOperation;
+import com.example.zoostore.api.operations.inputoutput.tag.add.AddTagInput;
+import com.example.zoostore.api.operations.inputoutput.tag.add.AddTagOutput;
+import com.example.zoostore.api.operations.inputoutput.tag.add.TagAddOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

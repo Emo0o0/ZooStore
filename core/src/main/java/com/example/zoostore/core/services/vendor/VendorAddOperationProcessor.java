@@ -2,9 +2,9 @@ package com.example.zoostore.core.services.vendor;
 
 import com.example.zoostore.persistence.entities.Vendor;
 import com.example.zoostore.persistence.repository.VendorRepository;
-import com.example.zoostore.api.operations.inputOutput.vendor.addVendor.AddVendorInput;
-import com.example.zoostore.api.operations.inputOutput.vendor.addVendor.AddVendorOutput;
-import com.example.zoostore.api.operations.inputOutput.vendor.addVendor.VendorAddOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.add.AddVendorInput;
+import com.example.zoostore.api.operations.inputoutput.vendor.add.AddVendorOutput;
+import com.example.zoostore.api.operations.inputoutput.vendor.add.VendorAddOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

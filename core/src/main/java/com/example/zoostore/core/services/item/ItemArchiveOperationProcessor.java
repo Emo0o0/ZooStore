@@ -3,9 +3,9 @@ package com.example.zoostore.core.services.item;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.repository.ItemRepository;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ArchiveItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ArchiveItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ItemArchiveOperation;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ArchiveItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ArchiveItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ItemArchiveOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

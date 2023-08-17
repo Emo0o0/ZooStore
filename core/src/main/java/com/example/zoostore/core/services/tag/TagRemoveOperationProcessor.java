@@ -3,9 +3,9 @@ package com.example.zoostore.core.services.tag;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.persistence.entities.Tag;
 import com.example.zoostore.persistence.repository.TagRepository;
-import com.example.zoostore.api.operations.inputOutput.tag.removeTag.RemoveTagInput;
-import com.example.zoostore.api.operations.inputOutput.tag.removeTag.RemoveTagOutput;
-import com.example.zoostore.api.operations.inputOutput.tag.removeTag.TagRemoveOperation;
+import com.example.zoostore.api.operations.inputoutput.tag.remove.RemoveTagInput;
+import com.example.zoostore.api.operations.inputoutput.tag.remove.RemoveTagOutput;
+import com.example.zoostore.api.operations.inputoutput.tag.remove.TagRemoveOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

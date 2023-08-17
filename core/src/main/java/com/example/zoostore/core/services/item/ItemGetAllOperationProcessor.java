@@ -2,12 +2,12 @@ package com.example.zoostore.core.services.item;
 
 import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.repository.ItemRepository;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.GetAllItemsInput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.GetAllItemsListOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.GetAllItemsOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.ItemGetAllOperation;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.MultimediaToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.TagsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.item.getall.GetAllItemsInput;
+import com.example.zoostore.api.operations.inputoutput.item.getall.GetAllItemsListOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getall.GetAllItemsOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getall.ItemGetAllOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.MultimediaToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.TagsToDtoSetMap;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,39 +1,36 @@
 package com.example.zoostore.rest.controllers;
 
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.AddTagToItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.AddTagToItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.addTagToItem.ItemAddTagOperation;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ArchiveItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ArchiveItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.CreateItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.CreateItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.archiveItem.ItemArchiveOperation;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.ItemCreateOperation;
-import com.example.zoostore.api.operations.inputOutput.item.editItemProperties.EditItemPropertiesInput;
-import com.example.zoostore.api.operations.inputOutput.item.editItemProperties.EditItemPropertiesOutput;
-import com.example.zoostore.api.operations.inputOutput.item.editItemProperties.ItemEditPropertiesOperation;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.GetAllItemsInput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.GetAllItemsListOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItems.ItemGetAllOperation;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItemsByTag.GetAllItemsByTagInput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItemsByTag.GetAllItemsByTagListOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getAllItemsByTag.ItemGetAllByTagOperation;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.GetItemByIdInput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.GetItemByIdOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.ItemGetByIdOperation;
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.GetItemsListInput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.GetItemsListOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.ItemsGetListOperation;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.ItemRemoveTagOperation;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.RemoveTagFromItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.RemoveTagFromItemOutputList;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.AddTagToItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.AddTagToItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.addtag.ItemAddTagOperation;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ArchiveItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ArchiveItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.create.CreateItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.create.CreateItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.archive.ItemArchiveOperation;
+import com.example.zoostore.api.operations.inputoutput.item.create.ItemCreateOperation;
+import com.example.zoostore.api.operations.inputoutput.item.edit.EditItemPropertiesInput;
+import com.example.zoostore.api.operations.inputoutput.item.edit.EditItemPropertiesOutput;
+import com.example.zoostore.api.operations.inputoutput.item.edit.ItemEditPropertiesOperation;
+import com.example.zoostore.api.operations.inputoutput.item.getall.GetAllItemsInput;
+import com.example.zoostore.api.operations.inputoutput.item.getall.GetAllItemsListOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getall.ItemGetAllOperation;
+import com.example.zoostore.api.operations.inputoutput.item.getallbytag.GetAllItemsByTagInput;
+import com.example.zoostore.api.operations.inputoutput.item.getallbytag.GetAllItemsByTagListOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getallbytag.ItemGetAllByTagOperation;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.GetItemByIdInput;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.GetItemByIdOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.ItemGetByIdOperation;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.GetItemsListInput;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.GetItemsListOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.ItemsGetListOperation;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.ItemRemoveTagOperation;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.RemoveTagFromItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.RemoveTagFromItemOutputList;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.UUID;
 
 @AllArgsConstructor
 @RestController

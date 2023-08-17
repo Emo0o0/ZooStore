@@ -5,9 +5,9 @@ import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.entities.Vendor;
 import com.example.zoostore.persistence.repository.ItemRepository;
 import com.example.zoostore.persistence.repository.VendorRepository;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.CreateItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.CreateItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.createItem.ItemCreateOperation;
+import com.example.zoostore.api.operations.inputoutput.item.create.CreateItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.create.CreateItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.create.ItemCreateOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

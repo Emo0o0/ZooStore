@@ -1,9 +1,9 @@
 package com.example.zoostore.core.services.tag;
 
-import com.example.zoostore.api.operations.inputOutput.tag.getAllTags.GetAllTagsInput;
-import com.example.zoostore.api.operations.inputOutput.tag.getAllTags.GetAllTagsOutput;
-import com.example.zoostore.api.operations.inputOutput.tag.getAllTags.TagGetAllOperation;
-import com.example.zoostore.api.operations.inputOutput.tag.getTagByTitle.GetTagByTitleOutput;
+import com.example.zoostore.api.operations.inputoutput.tag.getall.GetAllTagsInput;
+import com.example.zoostore.api.operations.inputoutput.tag.getall.GetAllTagsOutput;
+import com.example.zoostore.api.operations.inputoutput.tag.getall.TagGetAllOperation;
+import com.example.zoostore.api.operations.inputoutput.tag.getbytitle.GetTagByTitleOutput;
 import com.example.zoostore.persistence.entities.Tag;
 import com.example.zoostore.persistence.repository.TagRepository;
 import lombok.RequiredArgsConstructor;

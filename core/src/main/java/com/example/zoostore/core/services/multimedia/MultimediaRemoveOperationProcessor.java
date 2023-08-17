@@ -3,9 +3,9 @@ package com.example.zoostore.core.services.multimedia;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.persistence.entities.Multimedia;
 import com.example.zoostore.persistence.repository.MultimediaRepository;
-import com.example.zoostore.api.operations.inputOutput.multimedia.removeMultimedia.MultimediaRemoveOperation;
-import com.example.zoostore.api.operations.inputOutput.multimedia.removeMultimedia.RemoveMultimediaInput;
-import com.example.zoostore.api.operations.inputOutput.multimedia.removeMultimedia.RemoveMultimediaOutput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.remove.MultimediaRemoveOperation;
+import com.example.zoostore.api.operations.inputoutput.multimedia.remove.RemoveMultimediaInput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.remove.RemoveMultimediaOutput;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

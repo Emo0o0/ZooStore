@@ -3,11 +3,11 @@ package com.example.zoostore.core.services.item;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.repository.ItemRepository;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.GetItemByIdInput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.GetItemByIdOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemById.ItemGetByIdOperation;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.MultimediaToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.TagsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.GetItemByIdInput;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.GetItemByIdOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getbyid.ItemGetByIdOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.MultimediaToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.TagsToDtoSetMap;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

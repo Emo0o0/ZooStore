@@ -1,9 +1,9 @@
 package com.example.zoostore.core.services.item;
 
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.ItemRemoveTagOperation;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.RemoveTagFromItemInput;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.RemoveTagFromItemOutput;
-import com.example.zoostore.api.operations.inputOutput.item.removeTagFromItem.RemoveTagFromItemOutputList;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.ItemRemoveTagOperation;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.RemoveTagFromItemInput;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.RemoveTagFromItemOutput;
+import com.example.zoostore.api.operations.inputoutput.item.removetag.RemoveTagFromItemOutputList;
 import com.example.zoostore.core.exceptions.item.ItemNotFoundException;
 import com.example.zoostore.core.exceptions.tag.TagNotFoundException;
 import com.example.zoostore.persistence.entities.Item;
@@ -11,7 +11,6 @@ import com.example.zoostore.persistence.entities.Tag;
 import com.example.zoostore.persistence.repository.ItemRepository;
 import com.example.zoostore.persistence.repository.TagRepository;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.Remove;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

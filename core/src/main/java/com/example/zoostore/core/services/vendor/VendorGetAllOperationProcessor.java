@@ -1,12 +1,12 @@
 package com.example.zoostore.core.services.vendor;
 
-import com.example.zoostore.api.operations.inputOutput.vendor.getAllVendors.GetAllVendorsInput;
+import com.example.zoostore.api.operations.inputoutput.vendor.getall.GetAllVendorsInput;
 import com.example.zoostore.persistence.entities.Vendor;
 import com.example.zoostore.persistence.repository.VendorRepository;
-import com.example.zoostore.api.operations.inputOutput.vendor.getAllVendors.GetAllVendorsOutput;
-import com.example.zoostore.api.operations.inputOutput.vendor.getAllVendors.VendorGetAllOperation;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.ItemsToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.GetVendorByIdOutput;
+import com.example.zoostore.api.operations.inputoutput.vendor.getall.GetAllVendorsOutput;
+import com.example.zoostore.api.operations.inputoutput.vendor.getall.VendorGetAllOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.ItemsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.GetVendorByIdOutput;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

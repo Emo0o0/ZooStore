@@ -1,11 +1,11 @@
 package com.example.zoostore.core.services.item;
 
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.GetItemsListInput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.GetItemsListOutput;
-import com.example.zoostore.api.operations.inputOutput.item.getItemsList.ItemsGetListOperation;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.ItemsToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.MultimediaToDtoSetMap;
-import com.example.zoostore.api.operations.inputOutput.vendor.getVendorById.TagsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.GetItemsListInput;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.GetItemsListOutput;
+import com.example.zoostore.api.operations.inputoutput.item.getlist.ItemsGetListOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.ItemsToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.MultimediaToDtoSetMap;
+import com.example.zoostore.api.operations.inputoutput.vendor.getbyid.TagsToDtoSetMap;
 import com.example.zoostore.persistence.entities.Item;
 import com.example.zoostore.persistence.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
