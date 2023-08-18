@@ -27,10 +27,13 @@ public class VendorRemoveOperationProcessor implements VendorRemoveOperation {
 
         Optional<Vendor> optionalVendor = vendorRepository.findById(UUID.fromString(input.getId()));
         Vendor vendor = optionalVendor.get();
+
         vendorRepository.delete(vendor);
+
         RemoveVendorOutput output = RemoveVendorOutput.builder()
                 .id(input.getId().toString())
                 .build();
+
         return output;
     }
 }

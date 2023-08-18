@@ -29,9 +29,11 @@ public class MultimediaEditUrlOperationProcessor implements MultimediaEditUrlOpe
         Multimedia multimedia = optionalMultimedia.get();
         multimedia.setUrl(input.getUrl());
         multimediaRepository.save(multimedia);
+
         EditMultimediaUrlOutput output = EditMultimediaUrlOutput.builder()
                 .url(multimedia.getUrl())
                 .build();
+
         return output;
     }
 }

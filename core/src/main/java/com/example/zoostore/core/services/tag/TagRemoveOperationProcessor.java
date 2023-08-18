@@ -27,10 +27,13 @@ public class TagRemoveOperationProcessor implements TagRemoveOperation {
 
         Optional<Tag> optionalTag = tagRepository.findById(UUID.fromString(input.getId()));
         Tag tag = optionalTag.get();
+
         tagRepository.delete(tag);
+
         RemoveTagOutput output = RemoveTagOutput.builder()
                 .id(tag.getId().toString())
                 .build();
+
         return output;
     }
 }

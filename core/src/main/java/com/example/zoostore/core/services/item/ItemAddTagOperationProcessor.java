@@ -24,10 +24,11 @@ public class ItemAddTagOperationProcessor implements ItemAddTagOperation {
 
     @Override
     public AddTagToItemOutput process(AddTagToItemInput input) {
-        if(!itemRepository.existsById(UUID.fromString(input.getItemId()))){
+
+        if (!itemRepository.existsById(UUID.fromString(input.getItemId()))) {
             throw new ItemNotFoundException("No item with the given id was found");
         }
-        if(!tagRepository.existsByTitle(input.getTagName())){
+        if (!tagRepository.existsByTitle(input.getTagName())) {
             throw new TagNotFoundException("No tag with the given name was found");
         }
 

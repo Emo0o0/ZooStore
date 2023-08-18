@@ -21,7 +21,7 @@ public class ItemArchiveOperationProcessor implements ItemArchiveOperation {
     @Override
     public ArchiveItemOutput process(ArchiveItemInput input) {
 
-        if(!itemRepository.existsById(UUID.fromString(input.getId()))){
+        if (!itemRepository.existsById(UUID.fromString(input.getId()))) {
             throw new ItemNotFoundException("No item with the given id was found");
         }
 

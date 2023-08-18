@@ -33,6 +33,7 @@ public class MultimediaRemoveOperationProcessor implements MultimediaRemoveOpera
         RemoveMultimediaOutput output = RemoveMultimediaOutput.builder()
                 .id(input.getId())
                 .build();
+
         return output;
     }
 }

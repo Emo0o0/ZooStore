@@ -43,6 +43,7 @@ public class MultimediaAddOperationProcessor implements MultimediaAddOperation {
         AddMultimediaOutput addMultimediaOutput=AddMultimediaOutput.builder()
                 .id(multimedia.getId().toString())
                 .build();
+
         return addMultimediaOutput;
     }
 }

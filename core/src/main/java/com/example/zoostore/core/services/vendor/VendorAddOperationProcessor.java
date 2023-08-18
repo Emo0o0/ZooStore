@@ -26,6 +26,7 @@ public class VendorAddOperationProcessor implements VendorAddOperation {
         AddVendorOutput addVendorOutput = AddVendorOutput.builder()
                 .id(vendor.getId().toString())
                 .build();
+
         return addVendorOutput;
     }
 }

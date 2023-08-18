@@ -14,40 +14,39 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class ItemsGetListOperationProcessor implements ItemsGetListOperation {
 
     private final ItemRepository itemRepository;
+
     @Override
     public GetItemsListOutput process(GetItemsListInput input) {
 
-        List<UUID> ids=new ArrayList<>();
-        for(String s : input.getIds()){
-            ids.add(UUID.fromString(s));
-        }
+        List<UUID> ids = input.getIds().stream()
+                .map(UUID::fromString)
+                .collect(Collectors.toList());
 
         List<Item> items = itemRepository.getAllByIdIn(ids);
         if (items.isEmpty()) {
             throw new RuntimeException("No ids were passed");
         }
-        GetItemsListOutput outputList=GetItemsListOutput
-                .builder()
-                .itemsList(new ArrayList<>())
+
+        GetItemsListOutput outputList = GetItemsListOutput.builder()
+                .itemsList(items.stream()
+                        .map(i -> ItemsToDtoSetMap.builder()
+                                .id(i.getId().toString())
+                                .title(i.getTitle())
+                                .description(i.getDescription())
+                                .archived(i.isArchived())
+                                .vendorID(i.getVendor().getId().toString())
+                                .multimedia(MultimediaToDtoSetMap.mapSets(i.getMultimedia()))
+                                .tags(TagsToDtoSetMap.mapSets(i.getTags()))
+                                .build())
+                        .collect(Collectors.toList()))
                 .build();
-        for(Item i : items){
-            ItemsToDtoSetMap output = ItemsToDtoSetMap.builder()
-                    .id(i.getId().toString())
-                    .title(i.getTitle())
-                    .description(i.getDescription())
-                    .archived(i.isArchived())
-                    .vendorID(i.getVendor().getId().toString())
-                    .multimedia(MultimediaToDtoSetMap.mapSets(i.getMultimedia()))
-                    .tags(TagsToDtoSetMap.mapSets(i.getTags()))
-                    .build();
-            outputList.getItemsList().add(output);
-        }
 
         return outputList;
     }

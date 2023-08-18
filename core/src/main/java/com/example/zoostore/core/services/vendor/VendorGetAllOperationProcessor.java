@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -21,20 +22,20 @@ public class VendorGetAllOperationProcessor implements VendorGetAllOperation {
 
     @Override
     public GetAllVendorsOutput process(GetAllVendorsInput input) {
+
         List<Vendor> optionalVendor = vendorRepository.findAll();
         GetVendorByIdOutput output;
-        GetAllVendorsOutput outputList = GetAllVendorsOutput.builder()
-                .vendorList(new HashSet<>())
+        GetAllVendorsOutput outputSet = GetAllVendorsOutput.builder()
+                .vendorList(optionalVendor.stream()
+                        .map(vendor -> GetVendorByIdOutput.builder()
+                                .id(vendor.getId().toString())
+                                .name(vendor.getName())
+                                .phone(vendor.getPhone())
+                                .items(ItemsToDtoSetMap.mapSets(vendor.getItems()))
+                                .build())
+                        .collect(Collectors.toSet()))
                 .build();
-        for (Vendor vendor : optionalVendor) {
-            output = GetVendorByIdOutput.builder()
-                    .id(vendor.getId().toString())
-                    .name(vendor.getName())
-                    .phone(vendor.getPhone())
-                    .items(ItemsToDtoSetMap.mapSets(vendor.getItems()))
-                    .build();
-            outputList.getVendorList().add(output);
-        }
-        return outputList;
+
+        return outputSet;
     }
 }

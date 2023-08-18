@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -34,20 +35,17 @@ public class ItemGetAllByTagOperationProcessor implements ItemGetAllByTagOperati
         Set<ItemsToDtoSetMap> itemsList = ItemsToDtoSetMap.mapSets(new HashSet<>(itemRepository.findItemByTagsContaining(tag, pageRequest).getContent()));
 
 
-        Set<GetAllItemsByTagOutput> outputs=new HashSet<>();
-        for (ItemsToDtoSetMap i : itemsList) {
-
-            GetAllItemsByTagOutput output = GetAllItemsByTagOutput.builder()
-                    .id(i.getId().toString())
-                    .title(i.getTitle())
-                    .description(i.getDescription())
-                    .archived(String.valueOf(i.isArchived()))
-                    .vendorID(i.getVendorID())
-                    .multimedia(i.getMultimedia())
-                    .tags(i.getTags())
-                    .build();
-            outputs.add(output);
-        }
+        Set<GetAllItemsByTagOutput> outputs = itemsList.stream()
+                .map(i -> GetAllItemsByTagOutput.builder()
+                        .id(i.getId().toString())
+                        .title(i.getTitle())
+                        .description(i.getDescription())
+                        .archived(String.valueOf(i.isArchived()))
+                        .vendorID(i.getVendorID())
+                        .multimedia(i.getMultimedia())
+                        .tags(i.getTags())
+                        .build())
+                .collect(Collectors.toSet());
 
         return GetAllItemsByTagListOutput.builder()
                 .items(outputs)

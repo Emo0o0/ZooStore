@@ -29,9 +29,11 @@ public class TagEditTitleOperationProcessor implements TagEditTitleOperation {
         Tag tag = optionalTag.get();
         tag.setTitle(input.getTitle());
         tagRepository.save(tag);
+
         EditTagTitleOutput output=EditTagTitleOutput.builder()
                 .title(tag.getTitle())
                 .build();
+
         return output;
     }
 }

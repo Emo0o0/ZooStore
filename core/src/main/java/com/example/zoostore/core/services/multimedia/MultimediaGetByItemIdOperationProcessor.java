@@ -14,31 +14,31 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class MultimediaGetByItemIdOperationProcessor implements MultimediaGetByItemIdOperation {
 
     private final ItemRepository itemRepository;
+
     @Override
     public GetMultimediaByItemIdOutput process(GetMultimediaByItemIdInput input) {
 
-        if(!itemRepository.existsById(UUID.fromString(input.getItemId()))){
+        if (!itemRepository.existsById(UUID.fromString(input.getItemId()))) {
             throw new ItemNotFoundException("No item with the given id was found");
         }
 
         Optional<Item> optionalItem = itemRepository.findById(UUID.fromString(input.getItemId()));
         Item item = optionalItem.get();
-        Set<String> ids = new HashSet<>();
-        Set<String> urls = new HashSet<>();
-        for (Multimedia m : item.getMultimedia()) {
-            ids.add(m.getId().toString());
-            urls.add(m.getUrl());
-        }
 
         GetMultimediaByItemIdOutput output = GetMultimediaByItemIdOutput.builder()
-                .id(ids)
-                .url(urls)
+                .id(item.getMultimedia().stream()
+                        .map(m -> m.getId().toString())
+                        .collect(Collectors.toSet()))
+                .url(item.getMultimedia().stream()
+                        .map(Multimedia::getUrl)
+                        .collect(Collectors.toSet()))
                 .build();
 
         return output;

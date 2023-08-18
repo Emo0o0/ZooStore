@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -39,13 +40,15 @@ public class ItemRemoveTagOperationProcessor implements ItemRemoveTagOperation {
         Tag tag = tagRepository.findByTitle(input.getTagTitle());
         item.getTags().remove(tag);
         itemRepository.save(item);
-        RemoveTagFromItemOutputList outputList = RemoveTagFromItemOutputList.builder().tagList(new ArrayList<>()).build();
-        for (Tag forTag : item.getTags()) {
-            RemoveTagFromItemOutput output = RemoveTagFromItemOutput.builder()
-                    .tagTitle(forTag.getTitle())
-                    .build();
-            outputList.getTagList().add(output);
-        }
+
+        RemoveTagFromItemOutputList outputList = RemoveTagFromItemOutputList.builder()
+                .tagList(item.getTags().stream()
+                        .map(t -> RemoveTagFromItemOutput.builder()
+                                .tagTitle(tag.getTitle())
+                                .build())
+                        .collect(Collectors.toList()))
+                .build();
+
         return outputList;
     }
 }
