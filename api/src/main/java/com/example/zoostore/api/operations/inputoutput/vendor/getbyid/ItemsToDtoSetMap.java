@@ -6,6 +6,7 @@ import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -24,19 +25,19 @@ public class ItemsToDtoSetMap implements OperationResult {
     private Set<TagsToDtoSetMap> tags;
 
     public static Set<ItemsToDtoSetMap> mapSets(Set<Item> itemSet) {
-        Set<ItemsToDtoSetMap> outputSet = new HashSet<>();
-        for (Item item : itemSet) {
-            ItemsToDtoSetMap output = ItemsToDtoSetMap.builder()
-                    .id(item.getId().toString())
-                    .title(item.getTitle())
-                    .description(item.getDescription())
-                    .archived(item.isArchived())
-                    .vendorID(item.getVendor().getId().toString())
-                    .multimedia(MultimediaToDtoSetMap.mapSets(item.getMultimedia()))
-                    .tags(TagsToDtoSetMap.mapSets(item.getTags()))
-                    .build();
-            outputSet.add(output);
-        }
+
+        Set<ItemsToDtoSetMap> outputSet = itemSet.stream()
+                .map(item -> ItemsToDtoSetMap.builder()
+                        .id(item.getId().toString())
+                        .title(item.getTitle())
+                        .description(item.getDescription())
+                        .archived(item.isArchived())
+                        .vendorID(item.getVendor().getId().toString())
+                        .multimedia(MultimediaToDtoSetMap.mapSets(item.getMultimedia()))
+                        .tags(TagsToDtoSetMap.mapSets(item.getTags()))
+                        .build())
+                .collect(Collectors.toSet());
+
         return outputSet;
     }
 }

@@ -6,6 +6,7 @@ import com.example.zoostore.persistence.entities.Tag;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -18,14 +19,13 @@ public class TagsToDtoSetMap implements OperationResult {
 
     public static Set<TagsToDtoSetMap> mapSets(Set<Tag> tagSet) {
 
-        Set<TagsToDtoSetMap> outputSet = new HashSet<>();
-        for (Tag tag : tagSet) {
-            TagsToDtoSetMap output = TagsToDtoSetMap.builder()
-                    .id(tag.getId().toString())
-                    .title(tag.getTitle())
-                    .build();
-            outputSet.add(output);
-        }
+        Set<TagsToDtoSetMap> outputSet = tagSet.stream()
+                .map(tag -> TagsToDtoSetMap.builder()
+                        .id(tag.getId().toString())
+                        .title(tag.getTitle())
+                        .build())
+                .collect(Collectors.toSet());
+
         return outputSet;
     }
 }

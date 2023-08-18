@@ -7,6 +7,7 @@ import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -19,17 +20,14 @@ public class MultimediaToDtoSetMap implements OperationResult {
 
     private String url;
 
-    public static Set<MultimediaToDtoSetMap> mapSets(Set<Multimedia> multimediaSet){
-        Set<MultimediaToDtoSetMap> outputSet=new HashSet<>();
-        for(Multimedia multimedia : multimediaSet){
+    public static Set<MultimediaToDtoSetMap> mapSets(Set<Multimedia> multimediaSet) {
 
-            MultimediaToDtoSetMap output= MultimediaToDtoSetMap.builder()
-                    .id(multimedia.getId())
-                    .url(multimedia.getUrl())
-                    .build();
-
-            outputSet.add(output);
-        }
+        Set<MultimediaToDtoSetMap> outputSet = multimediaSet.stream()
+                .map(multimedia -> MultimediaToDtoSetMap.builder()
+                        .id(multimedia.getId())
+                        .url(multimedia.getUrl())
+                        .build())
+                .collect(Collectors.toSet());
 
         return outputSet;
     }
