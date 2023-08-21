@@ -50,13 +50,13 @@
     </dependencies>
 
     <build>
-        <finalName>example-storage</finalName>
+        <finalName>ZooStore</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.example.zoostorestorage.rest.ZooStoreStorageApplication</mainClass>
+                    <mainClass>com.example.zoostore.rest.ZooStoreApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
