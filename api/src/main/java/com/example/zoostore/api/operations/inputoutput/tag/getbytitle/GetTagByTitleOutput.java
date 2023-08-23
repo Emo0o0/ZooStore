@@ -15,5 +15,4 @@ public class GetTagByTitleOutput implements OperationResult {
 
     private String id;
     private String title;
-    private Set<GetItemByIdOutput> items;
 }

@@ -49,7 +49,8 @@ public class VendorController {
     }
 
     @GetMapping(path = "vendor/getAll")
-    public ResponseEntity<GetAllVendorsOutput> getAllVendors(GetAllVendorsInput input) {
+    public ResponseEntity<GetAllVendorsOutput> getAllVendors() {
+        GetAllVendorsInput input = GetAllVendorsInput.builder().build();
         return ResponseEntity.status(200).body(vendorGetAllOperation.process(input));
     }
 

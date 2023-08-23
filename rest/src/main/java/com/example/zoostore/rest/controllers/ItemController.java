@@ -79,12 +79,13 @@ public class ItemController {
     }
 
     @GetMapping(path = "/getAll")
-    public ResponseEntity<GetAllItemsListOutput> getAllItems(GetAllItemsInput input) {
+    public ResponseEntity<GetAllItemsListOutput> getAllItems() {
+        GetAllItemsInput input = GetAllItemsInput.builder().build();
         return ResponseEntity.status(200).body(itemGetAllOperation.process(input));
     }
 
-        @PostMapping(path = "/getList")
-    public ResponseEntity<GetItemsListOutput> getItemsList(@RequestBody GetItemsListInput input){
+    @PostMapping(path = "/getList")
+    public ResponseEntity<GetItemsListOutput> getItemsList(@RequestBody GetItemsListInput input) {
         return ResponseEntity.status(200).body(itemsGetListOperation.process(input));
     }
 

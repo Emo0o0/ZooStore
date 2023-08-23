@@ -1,4 +1,4 @@
-package com.example.zoostore.api.operations.inputoutput.vendor.add;
+package com.example.zoostore.api.operations.inputoutput.tag.create;
 
 import com.example.zoostore.api.base.OperationResult;
 import lombok.*;
@@ -8,7 +8,8 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddVendorOutput implements OperationResult {
+public class AddTagOutput implements OperationResult {
 
+    private String title;
     private String id;
 }

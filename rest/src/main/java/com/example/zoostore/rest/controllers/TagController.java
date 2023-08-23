@@ -53,7 +53,8 @@ public class TagController {
     }
 
     @GetMapping(path = "tag/GetAll")
-    public ResponseEntity<GetAllTagsOutput> getAllTags(GetAllTagsInput input) {
+    public ResponseEntity<GetAllTagsOutput> getAllTags() {
+        GetAllTagsInput input = GetAllTagsInput.builder().build();
         return ResponseEntity.status(200).body(tagGetAllOperation.process(input));
     }
 }

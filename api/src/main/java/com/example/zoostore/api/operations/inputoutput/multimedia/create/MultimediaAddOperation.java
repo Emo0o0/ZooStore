@@ -1,4 +1,4 @@
-package com.example.zoostore.api.operations.inputoutput.multimedia.add;
+package com.example.zoostore.api.operations.inputoutput.multimedia.create;
 
 import com.example.zoostore.api.base.OperationProcessor;
 

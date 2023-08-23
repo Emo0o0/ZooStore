@@ -1,4 +1,4 @@
-package com.example.zoostore.api.operations.inputoutput.tag.add;
+package com.example.zoostore.api.operations.inputoutput.tag.create;
 
 import com.example.zoostore.api.base.OperationInput;
 import jakarta.validation.constraints.NotBlank;
