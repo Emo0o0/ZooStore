@@ -1,7 +1,7 @@
 package com.example.zoostore.rest.controllers;
 
-import com.example.zoostore.api.operations.inputoutput.multimedia.add.AddMultimediaInput;
-import com.example.zoostore.api.operations.inputoutput.multimedia.add.AddMultimediaOutput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.create.AddMultimediaInput;
+import com.example.zoostore.api.operations.inputoutput.multimedia.create.AddMultimediaOutput;
 import com.example.zoostore.api.operations.inputoutput.multimedia.editurl.EditMultimediaUrlInput;
 import com.example.zoostore.api.operations.inputoutput.multimedia.editurl.EditMultimediaUrlOutput;
 import com.example.zoostore.api.operations.inputoutput.multimedia.getbyitemid.GetMultimediaByItemIdInput;
@@ -11,7 +11,7 @@ import com.example.zoostore.api.operations.inputoutput.multimedia.getbyid.GetMul
 import com.example.zoostore.api.operations.inputoutput.multimedia.getbyid.MultimediaGetByIdOperation;
 import com.example.zoostore.api.operations.inputoutput.multimedia.remove.RemoveMultimediaInput;
 import com.example.zoostore.api.operations.inputoutput.multimedia.remove.RemoveMultimediaOutput;
-import com.example.zoostore.api.operations.inputoutput.multimedia.add.MultimediaAddOperation;
+import com.example.zoostore.api.operations.inputoutput.multimedia.create.MultimediaAddOperation;
 import com.example.zoostore.api.operations.inputoutput.multimedia.editurl.MultimediaEditUrlOperation;
 import com.example.zoostore.api.operations.inputoutput.multimedia.remove.MultimediaRemoveOperation;
 import com.example.zoostore.core.services.multimedia.MultimediaGetByItemIdOperationProcessor;

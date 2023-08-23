@@ -1,7 +1,7 @@
 package com.example.zoostore.rest.controllers;
 
-import com.example.zoostore.api.operations.inputoutput.tag.add.AddTagInput;
-import com.example.zoostore.api.operations.inputoutput.tag.add.AddTagOutput;
+import com.example.zoostore.api.operations.inputoutput.tag.create.AddTagInput;
+import com.example.zoostore.api.operations.inputoutput.tag.create.AddTagOutput;
 import com.example.zoostore.api.operations.inputoutput.tag.edittitle.EditTagTitleInput;
 import com.example.zoostore.api.operations.inputoutput.tag.edittitle.EditTagTitleOutput;
 import com.example.zoostore.api.operations.inputoutput.tag.getall.GetAllTagsInput;
@@ -12,7 +12,7 @@ import com.example.zoostore.api.operations.inputoutput.tag.getbytitle.GetTagByTi
 import com.example.zoostore.api.operations.inputoutput.tag.getbytitle.TagGetByTitleOperation;
 import com.example.zoostore.api.operations.inputoutput.tag.remove.RemoveTagInput;
 import com.example.zoostore.api.operations.inputoutput.tag.remove.RemoveTagOutput;
-import com.example.zoostore.api.operations.inputoutput.tag.add.TagAddOperation;
+import com.example.zoostore.api.operations.inputoutput.tag.create.TagAddOperation;
 import com.example.zoostore.api.operations.inputoutput.tag.edittitle.TagEditTitleOperation;
 import com.example.zoostore.api.operations.inputoutput.tag.remove.TagRemoveOperation;
 import jakarta.validation.Valid;

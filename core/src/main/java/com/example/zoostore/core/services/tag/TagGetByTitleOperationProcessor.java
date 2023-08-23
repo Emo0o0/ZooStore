@@ -44,7 +44,6 @@ public class TagGetByTitleOperationProcessor implements TagGetByTitleOperation {
         return GetTagByTitleOutput.builder()
                 .id(tag.getId().toString())
                 .title(tag.getTitle())
-                .items(items)
                 .build();
     }
 }

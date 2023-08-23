@@ -1,8 +1,8 @@
 package com.example.zoostore.rest.controllers;
 
-import com.example.zoostore.api.operations.inputoutput.vendor.add.AddVendorInput;
-import com.example.zoostore.api.operations.inputoutput.vendor.add.AddVendorOutput;
-import com.example.zoostore.api.operations.inputoutput.vendor.add.VendorAddOperation;
+import com.example.zoostore.api.operations.inputoutput.vendor.create.AddVendorInput;
+import com.example.zoostore.api.operations.inputoutput.vendor.create.AddVendorOutput;
+import com.example.zoostore.api.operations.inputoutput.vendor.create.VendorAddOperation;
 import com.example.zoostore.api.operations.inputoutput.vendor.editproperties.EditVendorPropertiesInput;
 import com.example.zoostore.api.operations.inputoutput.vendor.editproperties.EditVendorPropertiesOutput;
 import com.example.zoostore.api.operations.inputoutput.vendor.editproperties.VendorEditPropertiesOperation;
